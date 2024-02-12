@@ -1,7 +1,5 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
+* {
+/*   box-sizing: border-box; */
   margin: 0;
   padding: 0;
 }
@@ -11,10 +9,10 @@ body {
   background: #f1f1f1;
 }
 
-.home {
+/* .home {
   height: 100vh;
   position: relative;
-}
+} */
 video {
   object-fit: cover;
 /*   position: absolute; */
@@ -47,12 +45,7 @@ video {
   font-size: 85px;
   line-height: 1.1;
 }
-.middle-line {
-  height: 200px;
-  width: 2px;
-  background: #fff;
-  margin: 40px auto;
-}
+
 .home-content button {
   display: block;
   font-size: 20px;
