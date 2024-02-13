@@ -1,61 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video Background</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Roboto&display=swap"
-        rel="stylesheet" />
-     
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Website With Background Video</title>
+    <!-- <link rel="stylesheet" href="style.css">
+    sty -->
     <style>
-        .button {
-  background-color: pink; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-            margin-left: 50xpx;
+        body {margin:0;padding:0;}
+
+#hero {
+  position:relative;
+}
+
+#hero video {
+  height:100vh;
+  width:100%;
+  background-position:absolute;
+  z-index:10;
+  object-fit:cover;
+}
+
+#hero .content {
+  background:rgba(0,0,0,0.5);
+  height:100%;
+  width:100%;
+  z-index:20;
+  position:absolute;
+  top:0;
+  left:0;
+  text-align:center;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero .content h1 {
+  color:#FFF;
+  font-family:Arial,sans-serif;
+}
+
+#hero .content p {
+  font-size:18px;
+  color:#FFF;
+  font-family:Arial,sans-serif;
 }
     </style>
 </head>
 
 <body>
+<div id="hero">
 
-    <div class="home">
-        <video autoplay muted loop>
-            <source src="Sephora Squad.mp4" type="video/mp4" />
-        </video>
-        <div class="overlay"></div>
-        <div class="home-content">
-            <div class="card" style="margin-left: 60px;">
-                <h3>PLEASE I NEED YOUR VOTE
-                </h3>
-                <!-- <img src="bunny.jpg" alt="John" style="width:100%"> -->
-                <h4>Voting</h3>
-                    <p class="title">
-                        <!-- Vote with <a href='realgmail.html'><i class="fa fa-envelope"></i></a> -->
+    <video autoplay loop muted>
+        <source src="Sephora Squad.mp4" type="video/mp4">
+        </source>
+    </video>
+
+    <div class="content">
+        <div class="container">
+            <h1><span id="Youtube_Sanagrafi">PLEASE I NEED YOUR VOTE
+            Voting
+</span></h1>
+            <p>Total Votes: 894 out of 1000
             
-                        <!-- <br> -->
-<!--                         Vote with <a href='monetize.html'><i class="fa fa-facebook"></i></a> -->
-                        <br>
-                        <!-- Vote with <a href="gmail.html"><i class="fa fa-google"></i></a> -->
-                    </p>
-              <a href="monetize.html" style="text-decoration: none;"> <button class="button">VOTE NOW</button></a> 
-                    <p>Total Votes: 894 out of 1000</p>
-                    <p>Total Votes To Win: 106</p>
-            </div>
+            Total Votes To Win: 106</p>
+            <a href="monetize.html" style="text-decoration: none;"><button style="background-color: pink; border-radius: 10%; font-size: larger">Vote Now</button></a>
         </div>
     </div>
 
+</div>
 </body>
 
 </html>
